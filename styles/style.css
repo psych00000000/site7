@@ -457,6 +457,7 @@ footer {
         display: block;
     }
     .header_desktop {
+        
         display: none;
     }
     .header_top {
@@ -517,7 +518,8 @@ footer {
 
     }
     .footer__info {
-       
+        width: 600px;
+       flex-wrap: wrap;
         padding-left: 15px;
         padding-right: 15px;
     }
