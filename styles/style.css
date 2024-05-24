@@ -31,7 +31,9 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.header_mobile {
+    display: none;
+}
 .header_inner {
     padding-top: 55px;
     margin: 0 auto;
@@ -183,20 +185,7 @@ header {
     text-decoration: none;
 }
 
-.video_right {
-    background-image: url(../images/Video_bg.png);
-    background-repeat: no-repeat;
-    padding-top: 94px;
-    position: relative;
-}
 
-.video_right::after {
-    content: url(../images/PlayButton.png);
-    display: flex;
-    justify-content: center;
-    margin-right: 100px;
-    margin-top: 10px;
-}
 
 .features {
     background-color: #f7f7f7;
@@ -326,6 +315,7 @@ header {
     display: block;
     display: inline-block;
     padding-right: 23px;
+    margin-bottom: 20px;
 }
 .contact_inner {
     margin-bottom: 123px;
@@ -350,8 +340,7 @@ line-height: 19.6px;
 text-align: justify;
 
 }
-.contact_right {
-}
+
 input{
     border-radius: 6px;
     border: 1px solid #333333;
@@ -408,9 +397,8 @@ footer {
   }
   
   .footer__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+   
+    
   }
   
   .footer__info {
@@ -460,4 +448,81 @@ footer {
     margin-right: 0;
   }
   
+  @media screen and (max-width: 768px){
+    
+    .container {
+        max-width: 767px;
+    }
+    .header_mobile {
+        display: block;
+    }
+    .header_desktop {
+        display: none;
+    }
+    .header_top {
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    .nav {
+    display: flex;
+    padding-left: 140px;
+    margin-right: 0;
+       
+    }
+    .nav_item_mobile {display: inline-block;
+        white-space: nowrap;
+        margin-right: 15px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .nav_item_mobile a {
+         text-decoration: none; color: #fff;
+    }
+    .video_left {
+        margin-right: 0;
+    }
+    
+    .video_inner {
+        margin: 0 auto;
+        grid-template-columns: auto;
+         justify-content: center;
+    }
+    .features_grid_bg {
+      display: none;
+    }
+    .features_grid_text {
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+    .technoogy_grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        justify-items: center;
+    }
+    .app_download {
+        flex-wrap: wrap;
+       justify-content: center;
+     
+    }
+    .app_download_left {
+        margin-right: 0;
+    }
+    .contact_inner {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .footer__info {
+       
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer__copyright {
+        padding-left: 15px;
+    }
+  }
 
